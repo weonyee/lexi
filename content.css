@@ -1,0 +1,98 @@
+/* Quick Translator - Minimal & Clean Design */
+
+#qwt-popup {
+  position: absolute;
+  z-index: 2147483647;
+  max-width: 280px;
+  min-width: 120px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', 'Segoe UI', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  display: none;
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+/* Content */
+#qwt-popup .qwt-content {
+  padding: 14px 16px;
+}
+
+#qwt-popup .qwt-translation {
+  color: #191f28;
+}
+
+#qwt-popup .qwt-main-translation {
+  font-size: 15px;
+  font-weight: 600;
+  color: #191f28;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+/* Dictionary */
+#qwt-popup .qwt-dict {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #f2f4f6;
+}
+
+#qwt-popup .qwt-dict-entry {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+#qwt-popup .qwt-dict-entry:last-child {
+  margin-bottom: 0;
+}
+
+#qwt-popup .qwt-pos {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 500;
+  color: #3182f6;
+  background: #f2f7ff;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+#qwt-popup .qwt-terms {
+  color: #6b7684;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Loading */
+#qwt-popup .qwt-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 24px;
+}
+
+#qwt-popup .qwt-loading::before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  border: 2px solid #e5e8eb;
+  border-top-color: #3182f6;
+  border-radius: 50%;
+  animation: qwt-spin 0.6s linear infinite;
+}
+
+@keyframes qwt-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Error */
+#qwt-popup .qwt-error {
+  color: #8b95a1;
+  text-align: center;
+  font-size: 13px;
+}

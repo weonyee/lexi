@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lexi</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      width: 220px;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', 'Segoe UI', sans-serif;
+      background: #ffffff;
+      color: #191f28;
+      line-height: 1.4;
+    }
+    
+    .header {
+      margin-bottom: 14px;
+    }
+    
+    .header h1 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #191f28;
+    }
+    
+    .header p {
+      font-size: 11px;
+      color: #8b95a1;
+      margin-top: 2px;
+    }
+    
+    .setting-card {
+      background: #f7f8fa;
+      border-radius: 10px;
+      padding: 12px;
+    }
+    
+    .setting-label {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      color: #6b7684;
+      margin-bottom: 8px;
+    }
+    
+    .select-wrapper {
+      position: relative;
+    }
+    
+    .select-wrapper select {
+      width: 100%;
+      padding: 10px 12px;
+      padding-right: 32px;
+      border: none;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      background: #ffffff;
+      color: #191f28;
+      cursor: pointer;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    
+    .select-wrapper select:focus {
+      box-shadow: 0 0 0 2px #3182f6;
+    }
+    
+    .select-wrapper::after {
+      content: '';
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 5px solid #8b95a1;
+      pointer-events: none;
+    }
+    
+    .status {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 500;
+      padding: 8px;
+      background: #e8f3ff;
+      color: #3182f6;
+      border-radius: 8px;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+    }
+    
+    .status.show {
+      opacity: 1;
+    }
+    
+    .tip-card {
+      margin-top: 8px;
+      padding: 8px 10px;
+      background: #fffbe6;
+      border-radius: 8px;
+    }
+    
+    .tip-title {
+      font-size: 10px;
+      font-weight: 600;
+      color: #b8860b;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+    
+    .tip-content {
+      font-size: 11px;
+      color: #6b7684;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Lexi</h1>
+    <p>드래그로 빠르게 번역하세요</p>
+  </div>
+  
+  <div class="setting-card">
+    <label class="setting-label" for="targetLang">번역 언어</label>
+    <div class="select-wrapper">
+      <select id="targetLang">
+        <option value="ko">한국어</option>
+        <option value="en">English</option>
+        <option value="ja">日本語</option>
+        <option value="zh-CN">简体中文</option>
+        <option value="zh-TW">繁體中文</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="ru">Русский</option>
+        <option value="pt">Português</option>
+        <option value="vi">Tiếng Việt</option>
+        <option value="th">ภาษาไทย</option>
+        <option value="id">Bahasa Indonesia</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="status" id="status">저장됨</div>
+  
+  <div class="tip-card">
+    <div class="tip-title">Tip</div>
+    <div class="tip-content">텍스트를 드래그하면 번역이 나타납니다</div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
