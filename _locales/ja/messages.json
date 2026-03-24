@@ -1,0 +1,74 @@
+{
+  "extName": {
+    "message": "Lexi"
+  },
+  "extDescription": {
+    "message": "ドラッグした単語をすばやく翻訳します"
+  },
+  "headerTitle": {
+    "message": "Lexi"
+  },
+  "headerSubtitle": {
+    "message": "ドラッグで素早く翻訳"
+  },
+  "targetLangLabel": {
+    "message": "翻訳言語"
+  },
+  "systemLangLabel": {
+    "message": "システム言語"
+  },
+  "saved": {
+    "message": "保存しました"
+  },
+  "tipTitle": {
+    "message": "ヒント"
+  },
+  "tipContent": {
+    "message": "テキストをドラッグすると翻訳が表示されます"
+  },
+  "noResult": {
+    "message": "翻訳結果なし"
+  },
+  "translateFailed": {
+    "message": "翻訳に失敗しました"
+  },
+  "langKorean": {
+    "message": "한국어"
+  },
+  "langEnglish": {
+    "message": "English"
+  },
+  "langJapanese": {
+    "message": "日本語"
+  },
+  "langChineseSimplified": {
+    "message": "简体中文"
+  },
+  "langChineseTraditional": {
+    "message": "繁體中文"
+  },
+  "langSpanish": {
+    "message": "Español"
+  },
+  "langFrench": {
+    "message": "Français"
+  },
+  "langGerman": {
+    "message": "Deutsch"
+  },
+  "langRussian": {
+    "message": "Русский"
+  },
+  "langPortuguese": {
+    "message": "Português"
+  },
+  "langVietnamese": {
+    "message": "Tiếng Việt"
+  },
+  "langThai": {
+    "message": "ภาษาไทย"
+  },
+  "langIndonesian": {
+    "message": "Bahasa Indonesia"
+  }
+}

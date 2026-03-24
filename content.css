@@ -96,3 +96,34 @@
   text-align: center;
   font-size: 13px;
 }
+
+/* 다크모드 */
+@media (prefers-color-scheme: dark) {
+  #qwt-popup {
+    background: #1e2025;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  }
+
+  #qwt-popup .qwt-translation,
+  #qwt-popup .qwt-main-translation {
+    color: #e5e8eb;
+  }
+
+  #qwt-popup .qwt-dict {
+    border-top-color: #2e3138;
+  }
+
+  #qwt-popup .qwt-pos {
+    color: #6ea8fe;
+    background: #1a2a3a;
+  }
+
+  #qwt-popup .qwt-terms {
+    color: #8b95a1;
+  }
+
+  #qwt-popup .qwt-loading::before {
+    border-color: #2e3138;
+    border-top-color: #6ea8fe;
+  }
+}

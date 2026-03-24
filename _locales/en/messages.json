@@ -1,0 +1,74 @@
+{
+  "extName": {
+    "message": "Lexi"
+  },
+  "extDescription": {
+    "message": "Quickly translate words by dragging"
+  },
+  "headerTitle": {
+    "message": "Lexi"
+  },
+  "headerSubtitle": {
+    "message": "Translate quickly by dragging"
+  },
+  "targetLangLabel": {
+    "message": "Translation Language"
+  },
+  "systemLangLabel": {
+    "message": "System Language"
+  },
+  "saved": {
+    "message": "Saved"
+  },
+  "tipTitle": {
+    "message": "Tip"
+  },
+  "tipContent": {
+    "message": "Drag text to see the translation"
+  },
+  "noResult": {
+    "message": "No translation result"
+  },
+  "translateFailed": {
+    "message": "Translation failed"
+  },
+  "langKorean": {
+    "message": "한국어"
+  },
+  "langEnglish": {
+    "message": "English"
+  },
+  "langJapanese": {
+    "message": "日本語"
+  },
+  "langChineseSimplified": {
+    "message": "简体中文"
+  },
+  "langChineseTraditional": {
+    "message": "繁體中文"
+  },
+  "langSpanish": {
+    "message": "Español"
+  },
+  "langFrench": {
+    "message": "Français"
+  },
+  "langGerman": {
+    "message": "Deutsch"
+  },
+  "langRussian": {
+    "message": "Русский"
+  },
+  "langPortuguese": {
+    "message": "Português"
+  },
+  "langVietnamese": {
+    "message": "Tiếng Việt"
+  },
+  "langThai": {
+    "message": "ภาษาไทย"
+  },
+  "langIndonesian": {
+    "message": "Bahasa Indonesia"
+  }
+}

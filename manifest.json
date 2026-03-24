@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "name": "Lexi",
   "version": "1.0.0",
-  "description": "드래그한 단어의 뜻을 빠르게 번역합니다",
-  "permissions": ["storage"],
+  "description": "드래그한 단어를 한국어로 빠르게 번역합니다",
+  "default_locale": "ko",
   "host_permissions": ["https://translate.googleapis.com/*"],
   "action": {
     "default_popup": "popup.html",

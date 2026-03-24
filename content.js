@@ -5,28 +5,6 @@
   let popup = null;
   let currentSelection = '';
   let hideTimeout = null;
-  let targetLang = 'ko';
-
-  // 안전하게 chrome storage 접근
-  function loadSettings() {
-    try {
-      if (typeof chrome !== 'undefined' && chrome.storage && chrome.storage.sync) {
-        chrome.storage.sync.get(['targetLang'], (result) => {
-          if (chrome.runtime.lastError) {
-            console.log('Storage error:', chrome.runtime.lastError);
-            return;
-          }
-          if (result && result.targetLang) {
-            targetLang = result.targetLang;
-          }
-        });
-      }
-    } catch (e) {
-      // Extension context invalidated - 무시
-    }
-  }
-  
-  loadSettings();
 
   function createPopup() {
     if (popup && document.body.contains(popup)) return popup;
@@ -110,10 +88,7 @@
 
   async function translateText(text) {
     try {
-      // 설정 다시 로드 시도
-      loadSettings();
-      
-      const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLang}&dt=t&dt=bd&dj=1&q=${encodeURIComponent(text)}`;
+      const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&dt=bd&dj=1&q=${encodeURIComponent(text)}`;
       
       const response = await fetch(url);
       const data = await response.json();
@@ -153,8 +128,9 @@
     setTimeout(() => {
       const selection = window.getSelection();
       const selectedText = selection.toString().trim();
-      
-      if (selectedText && selectedText.length > 0 && selectedText.length <= 500) {
+      const wordCount = selectedText.trim().split(/\s+/).length;
+
+      if (selectedText && selectedText.length > 0 && wordCount <= 2) {
         if (selectedText !== currentSelection) {
           currentSelection = selectedText;
           showPopup(e.clientX, e.clientY, selectedText);
@@ -170,17 +146,4 @@
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') hidePopup();
   });
-
-  // storage 변경 감지
-  try {
-    if (typeof chrome !== 'undefined' && chrome.storage && chrome.storage.onChanged) {
-      chrome.storage.onChanged.addListener((changes) => {
-        if (changes.targetLang) {
-          targetLang = changes.targetLang.newValue || 'ko';
-        }
-      });
-    }
-  } catch (e) {
-    // 무시
-  }
 })();

@@ -1,0 +1,74 @@
+{
+  "extName": {
+    "message": "Lexi"
+  },
+  "extDescription": {
+    "message": "拖动快速翻译单词"
+  },
+  "headerTitle": {
+    "message": "Lexi"
+  },
+  "headerSubtitle": {
+    "message": "拖动快速翻译"
+  },
+  "targetLangLabel": {
+    "message": "翻译语言"
+  },
+  "systemLangLabel": {
+    "message": "系统语言"
+  },
+  "saved": {
+    "message": "已保存"
+  },
+  "tipTitle": {
+    "message": "提示"
+  },
+  "tipContent": {
+    "message": "拖动文本即可显示翻译"
+  },
+  "noResult": {
+    "message": "无翻译结果"
+  },
+  "translateFailed": {
+    "message": "翻译失败"
+  },
+  "langKorean": {
+    "message": "한국어"
+  },
+  "langEnglish": {
+    "message": "English"
+  },
+  "langJapanese": {
+    "message": "日本語"
+  },
+  "langChineseSimplified": {
+    "message": "简体中文"
+  },
+  "langChineseTraditional": {
+    "message": "繁體中文"
+  },
+  "langSpanish": {
+    "message": "Español"
+  },
+  "langFrench": {
+    "message": "Français"
+  },
+  "langGerman": {
+    "message": "Deutsch"
+  },
+  "langRussian": {
+    "message": "Русский"
+  },
+  "langPortuguese": {
+    "message": "Português"
+  },
+  "langVietnamese": {
+    "message": "Tiếng Việt"
+  },
+  "langThai": {
+    "message": "ภาษาไทย"
+  },
+  "langIndonesian": {
+    "message": "Bahasa Indonesia"
+  }
+}
