@@ -122,6 +122,10 @@
     }
   }
 
+  function isKorean(text) {
+    return /[\uAC00-\uD7A3\u1100-\u11FF\u3130-\u318F]/.test(text);
+  }
+
   document.addEventListener('mouseup', (e) => {
     if (popup && popup.contains(e.target)) return;
     
@@ -130,7 +134,7 @@
       const selectedText = selection.toString().trim();
       const wordCount = selectedText.trim().split(/\s+/).length;
 
-      if (selectedText && selectedText.length > 0 && wordCount <= 2) {
+      if (selectedText && selectedText.length > 0 && wordCount <= 2 && !isKorean(selectedText)) {
         if (selectedText !== currentSelection) {
           currentSelection = selectedText;
           showPopup(e.clientX, e.clientY, selectedText);
