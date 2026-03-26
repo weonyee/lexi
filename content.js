@@ -53,7 +53,7 @@
     popupEl.style.opacity = '0';
     
     let posX = x;
-    let posY = y - 12;
+    let posY = y - 60;
     
     const popupWidth = 240;
     if (posX - popupWidth/2 < 10) posX = popupWidth/2 + 10;
@@ -134,10 +134,13 @@
       const selectedText = selection.toString().trim();
       const wordCount = selectedText.trim().split(/\s+/).length;
 
-      if (selectedText && selectedText.length > 0 && wordCount <= 2 && !isKorean(selectedText)) {
+      const isNumericOnly = /^[\d\s.,%-]+$/.test(selectedText);
+      if (selectedText && selectedText.length > 0 && wordCount <= 2 && !isKorean(selectedText) && !isNumericOnly) {
         if (selectedText !== currentSelection) {
           currentSelection = selectedText;
-          showPopup(e.clientX, e.clientY, selectedText);
+          const range = selection.getRangeAt(0);
+          const rect = range.getBoundingClientRect();
+          showPopup(rect.left + rect.width / 2, rect.top, selectedText);
         }
       }
     }, 10);
